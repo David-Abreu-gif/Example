@@ -1,0 +1,249 @@
+/* ---------------------------------Documento */
+body{
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    overflow: auto;
+    margin: 0px;
+}
+
+
+/* ---------------------------------Icono de Menu */
+#div_icon{
+    position: absolute;
+    display: flex;
+    background: #e91e63;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: 3vw;
+    top: 3vh;
+    filter: brightness(0.7);
+    z-index: 2;
+}
+
+#div_icon:hover{
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+#icon_menu{
+  width: 40px;
+}
+
+
+/* ---------------------------------Ventana del Menu */
+#menu{
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  text-align-last: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background: #00000085;
+  z-index: 1;
+}
+
+#menu ul{
+  list-style: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#menu li{
+}
+
+#menu a{
+  text-decoration: none;
+  font-size: 60px;
+  color: #e91e63;
+  padding-inline: 30vw;
+}
+
+#menu li:hover{
+  background: #e91e6321;
+}
+
+
+/* ---------------------------------Contenido */
+#content{
+  width: 100vw;
+  height: 100vh;
+  background: #00000082;
+  overflow: auto;
+}
+/* ----------Scrollbar */
+#content::-webkit-scrollbar {
+  width: 10px;
+}
+
+#content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: #e91e634d;
+}
+/* ----------Scrollbar */
+
+/* ---------------------------------Perfil */
+#myprofile{
+  height: 100vh;
+  width: 100vw;
+  padding: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+#profile h2{
+  color: #e91e63;
+}
+
+#photo{
+  width: 200px;
+  border-radius: 50%;
+}
+
+#date_country{
+  display: flex;
+}
+
+#date_country a{
+  color: #2196f3;
+}
+
+#date_country h3{
+  color: #e91e63;
+  margin-right: 15px;
+}
+
+#country{
+  width: 45px;
+  height: 40px;
+}
+
+#information ul{
+  color: #e91e63;
+  font-size: xx-large;
+  padding: 0px;
+  margin: 0px;
+}
+
+#information li{
+  list-style: none;
+  transition: 1s;
+}
+
+#information li:hover{
+  padding-left: 20px;
+}
+
+/* ---------------------------------Proyectos */
+#projects{
+  padding: 10%;
+  display: none
+}
+
+#projects section{
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#projects section h2{
+  color: #e91e63;
+  position: relative;
+}
+
+#projects section h2:hover{
+  animation-name: hover_title;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hover_title {
+    0%{
+      right: 0px;
+    }
+    37%{
+      right: 5px;
+    }
+    74%{
+      right: 5px;
+    }
+    100%{
+      right: 0px;
+    }
+}
+
+#projects img{
+  width: 300px;
+  filter: grayscale(1);
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+#projects img:hover{
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+/* ---------------------------------Zoom imagenes */
+#zoom_img{
+  background: #000000ba;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#zoom_img img{
+  display: none;
+  width: 100%
+}
+
+/* ---------------------------------Cuentas de Contactos */
+#mails{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+#mails li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#mails img{
+  width: 80px;
+}
+
+#mails a{
+  color: #e91e63;
+  text-decoration: none;
+  font-size: 40px;
+  transition: 1s;
+}
+
+#github{
+  filter: invert();
+}
+
+#mails a:hover{
+  padding-left: 30px;
+}
